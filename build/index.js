@@ -11,6 +11,14 @@ var matches = fs_1.default.readFileSync('football.csv', {
     .map(function (row) {
     return row.split(',');
 });
+// enum - enumeration use to signal that this is a collection of very closely related values.
+var MatchResult;
+(function (MatchResult) {
+    MatchResult["HomeWin"] = "H";
+    MatchResult["AwayWin"] = "A";
+    MatchResult["Draw"] = "D";
+})(MatchResult || (MatchResult = {}));
+;
 // analysis
 var manUnitedWins = 0;
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {

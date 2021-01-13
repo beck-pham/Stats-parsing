@@ -6,7 +6,15 @@ const matches = fs.readFileSync('football.csv', {
   .split('\n')
   .map((row: string): string[] => {
     return row.split(',');
-  })
+  }
+)
+
+// enum - enumeration use to signal that this is a collection of very closely related values.
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D'
+};
 
 // analysis
 let manUnitedWins = 0;
